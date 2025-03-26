@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    namespace "devkit.blade.vuzix.com.blade_template_app"
+    compileSdkVersion 34
     defaultConfig {
         applicationId "devkit.blade.vuzix.com.blade_template_app"
         minSdkVersion 22
-        targetSdkVersion 30
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
     }
@@ -18,7 +19,12 @@ android {
 }
 
 dependencies {
-//    Dependencies for our VUZIX HUD Resources and ActionMenu Libraries.
-    implementation 'com.vuzix:hud-actionmenu:1.1'
-    implementation 'com.vuzix:hud-resources:1.1'
+    def appcompat_version = "1.7.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22"
+
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+
+    // Dependencies for our VUZIX HUD Resources and ActionMenu Libraries.
+    implementation 'com.vuzix:hud-actionmenu:2.9.1'
+    implementation 'com.vuzix:hud-resources:2.4.0'
 }

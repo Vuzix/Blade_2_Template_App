@@ -144,37 +144,22 @@ public class around_content_template_activity extends ActionMenuActivity {
      */
     @Override
     protected void onActionItemFocused(MenuItem item) {
-
-        switch (item.getItemId())
-        {
-            case R.id.action_menu_hello:
-
-                mainTitle.setText(getString(R.string.Hello));
-                mainValue.setText(R.string.showHelloToast2);
-                mainImage.setImageResource(R.drawable.baseline_android_24);
-
-                break;
-            case R.id.action_menu_vuzix:
-
-                mainTitle.setText(getString(R.string.Vuzix));
-                mainValue.setText(R.string.showVuzixToast2);
-                mainImage.setImageResource(R.drawable.baseline_info_24);
-
-                break;
-            case R.id.action_menu_blade:
-
-                mainTitle.setText(getString(R.string.Blade,statusCount));
-                mainValue.setText(getString(R.string.showBladeToast2));
-                mainImage.setImageResource(R.drawable.baseline_copyright_24);
-
-                break;
-            case R.id.action_menu_lunch_center_lock:
-
-                mainTitle.setText(R.string.showCenterContent);
-                mainValue.setText(getString(R.string.centerContent));
-                mainImage.setImageResource(R.drawable.baseline_info_24);
-
-                break;
+        if (item.getItemId() == R.id.action_menu_hello) {
+            mainTitle.setText(getString(R.string.Hello));
+            mainValue.setText(R.string.showHelloToast2);
+            mainImage.setImageResource(R.drawable.baseline_android_24);
+        } else if (item.getItemId() == R.id.action_menu_vuzix) {
+            mainTitle.setText(getString(R.string.Vuzix));
+            mainValue.setText(R.string.showVuzixToast2);
+            mainImage.setImageResource(R.drawable.baseline_info_24);
+        } else if (item.getItemId() == R.id.action_menu_blade) {
+            mainTitle.setText(getString(R.string.Blade,statusCount));
+            mainValue.setText(getString(R.string.showBladeToast2));
+            mainImage.setImageResource(R.drawable.baseline_copyright_24);
+        } else if (item.getItemId() == R.id.action_menu_lunch_center_lock) {
+            mainTitle.setText(R.string.showCenterContent);
+            mainValue.setText(getString(R.string.centerContent));
+            mainImage.setImageResource(R.drawable.baseline_info_24);
         }
     }
 

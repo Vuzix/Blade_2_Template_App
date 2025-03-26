@@ -15,7 +15,8 @@
         android:theme="@style/HudTheme">
         <meta-data
             android:name="com.vuzix.icon.tint" android:value="true" />
-        <activity android:name=".center_content_template_activity">
+        <activity android:name=".center_content_template_activity"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,7 +37,8 @@
         <activity android:name=".center_content_pop_up_menu_template_activity">
         </activity>
 
-        <receiver android:name=".Template_Widget">
+        <receiver android:name=".Template_Widget"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -52,7 +54,8 @@
 
 
         <receiver
-            android:name=".Template_Widget_Update_Receiver">
+            android:name=".Template_Widget_Update_Receiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.vuzix.intent.action.UI_DISPLAY_MODE" />
             </intent-filter>

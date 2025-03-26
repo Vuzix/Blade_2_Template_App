@@ -159,11 +159,11 @@ public class center_content_pop_up_menu_template_activity extends ActionMenuActi
 
         private void setSwitchState(boolean on, int times) {
             if (on) {
-                icon.setImageTintList(getResources().getColorStateList(R.color.action_menu_item_icon_tint_color));
+                icon.setImageTintList(getResources().getColorStateList(com.vuzix.hud.actionmenu.R.color.action_menu_item_text_color));
                 setIcon(getResources().getDrawable(R.drawable.baseline_perm_device_information_24, getContext().getTheme()));
                 setTitle(getResources().getString(R.string.Blade,times));
             } else {
-                icon.setImageTintList(getResources().getColorStateList(R.color.hud_blue));
+                icon.setImageTintList(getResources().getColorStateList(com.vuzix.hud.actionmenu.R.color.hud_blue));
                 setIcon(getResources().getDrawable(R.drawable.baseline_copyright_24,getContext().getTheme()));
                 setTitle(getResources().getString(R.string.Blade,times));
             }
